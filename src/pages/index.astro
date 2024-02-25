@@ -11,85 +11,109 @@ import Printable from "../components/Printable.astro";
   <p>My CV is the following...</p>
 
   <Printable classes="px-12 py-10 bg-white text-black">
-    <h1 class="text-4xl tracking-wide text-center">
-      <span class="font-extrabold">JULIO</span> CASTRO
-    </h1>
-    <h2 class="text-xl text-center mt-2">Senior Software Engineer</h2>
+    <div class="flex flex-col gap-2">
+      <h1 class="text-4xl tracking-wide text-center">
+        <span class="font-extrabold">JULIO</span> CASTRO
+      </h1>
+      <h2 class="text-xl text-center">Senior Software Engineer</h2>
+    </div>
 
-    <hr class="mt-4" />
-    <p class="mt-2 text-center">
-      julio.castro.dev@gmail.com | +41 76 513 18 64 | Zürich, Switzerland
-    </p>
-    <hr class="mt-2" />
+    <div class="mt-4 flex flex-col gap-2">
+      <hr />
+      <p class="text-center">
+        julio.castro.dev@gmail.com | +41 76 513 18 64 | Zürich, Switzerland
+      </p>
+      <hr />
+    </div>
 
-    <h2 class="text-xl font-extrabold mt-6">SUMMARY</h2>
-    <p class="mt-2">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-      eius atque labore ducimus maiores placeat ut quaerat quod. Aspernatur
-      dicta, facere maiores incidunt tempora soluta? Pariatur, repellat. Dicta,
-      cumque inventore? dicta, facere maiores incidunt tempora soluta? Pariatur,
-      repellat. Dicta, cumque inventore?
-    </p>
-    <hr class="mt-2" />
+    <div class="mt-6 flex flex-col gap-2">
+      <h2 class="text-xl font-extrabold">SUMMARY</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+        eius atque labore ducimus maiores placeat ut quaerat quod. Aspernatur
+        dicta, facere maiores incidunt tempora soluta? Pariatur, repellat.
+        Dicta, cumque inventore? dicta, facere maiores incidunt tempora soluta?
+        Pariatur, repellat. Dicta, cumque inventore?
+      </p>
+      <hr />
+    </div>
 
-    <h2 class="text-xl font-extrabold mt-4">SKILLS</h2>
-    <ul class="mt-2 list-inside list-disc">
-      <li>Skill 1</li>
-      <li>Skill 2</li>
-      <li>Skill 3</li>
-      <li>Skill 3</li>
-      <li>Skill 4</li>
-      <li>Skill 5</li>
-      <li>Skill 6</li>
-      <li>Skill 7</li>
-    </ul>
-    <hr class="mt-2" />
+    <div class="mt-4 flex flex-col gap-2">
+      <h2 class="text-xl font-extrabold">SKILLS</h2>
+      <ul class="list-inside list-disc">
+        <li>Skill 1</li>
+        <li>Skill 2</li>
+        <li>Skill 3</li>
+        <li>Skill 3</li>
+        <li>Skill 4</li>
+        <li>Skill 5</li>
+        <li>Skill 6</li>
+        <li>Skill 7</li>
+      </ul>
+      <hr />
+    </div>
 
-    <h2 class="text-xl font-extrabold mt-4">EXPERIENCE</h2>
-    <h3 class="font-bold mt-2">Current Senior Software Position</h3>
-    <p>Mar 2019 - Present</p>
-    <ul class="mt-2 list-inside list-disc">
-      <li>Comment 1</li>
-      <li>Comment 2</li>
-      <li>Comment 3</li>
-    </ul>
+    <div class="mt-4">
+      <h2 class="text-xl font-extrabold">EXPERIENCE</h2>
 
-    <h3 class="font-bold mt-6">Intermediate Senior Software Position</h3>
-    <p>Mar 2018 - Mar 2019</p>
-    <ul class="mt-2 list-inside list-disc">
-      <li>Comment 1</li>
-      <li>Comment 2</li>
-      <li>Comment 3</li>
-    </ul>
+      <div class="mt-2 flex flex-col gap-1">
+        <h3 class="font-bold">Current Senior Software Position</h3>
+        <p>Mar 2019 - Present</p>
+        <ul class="list-inside list-disc">
+          <li>Comment 1</li>
+          <li>Comment 2</li>
+          <li>Comment 3</li>
+        </ul>
+      </div>
 
-    <h3 class="font-bold mt-6">Intermediate Senior Software Position</h3>
-    <p>Mar 2018 - Mar 2019</p>
-    <ul class="mt-2 list-inside list-disc">
-      <li>Comment 1</li>
-      <li>Comment 2</li>
-      <li>Comment 3</li>
-    </ul>
+      <div class="mt-6 flex flex-col gap-1">
+        <h3 class="font-bold">Intermediate Senior Software Position</h3>
+        <p>Mar 2018 - Mar 2019</p>
+        <ul class="list-inside list-disc">
+          <li>Comment 1</li>
+          <li>Comment 2</li>
+          <li>Comment 3</li>
+        </ul>
+      </div>
 
-    <h3 class="font-bold mt-6">Last Senior Software Position</h3>
-    <p>Mar 2018 - Mar 2019</p>
-    <ul class="mt-2 list-inside list-disc">
-      <li>Comment 1</li>
-      <li>Comment 2</li>
-      <li>Comment 3</li>
-    </ul>
-    <hr class="mt-2" />
+      <div class="mt-6 flex flex-col gap-1">
+        <h3 class="font-bold">Intermediate Senior Software Position</h3>
+        <p>Mar 2018 - Mar 2019</p>
+        <ul class="list-inside list-disc">
+          <li>Comment 1</li>
+          <li>Comment 2</li>
+          <li>Comment 3</li>
+        </ul>
+      </div>
 
-    <h2 class="text-xl font-extrabold mt-4">EDUCATION</h2>
-    <h3 class="font-bold mt-2">Education title</h3>
-    <p>2010 - 2014</p>
-    <hr class="mt-2" />
+      <div class="mt-6 flex flex-col gap-1">
+        <h3 class="font-bold">Last Senior Software Position</h3>
+        <p>Mar 2018 - Mar 2019</p>
+        <ul class="list-inside list-disc">
+          <li>Comment 1</li>
+          <li>Comment 2</li>
+          <li>Comment 3</li>
+        </ul>
+      </div>
 
-    <h2 class="text-xl font-extrabold mt-4">LANGUAGES</h2>
-    <ul class="mt-2 list-inside list-disc">
-      <li>English - C2</li>
-      <li>Spanish - Native</li>
-      <li>German - A2</li>
-    </ul>
-    <hr class="mt-2" />
+      <hr class="mt-2" />
+    </div>
+
+    <div class="mt-4 flex flex-col gap-2">
+      <h2 class="text-xl font-extrabold">EDUCATION</h2>
+      <h3 class="font-bold">Education title</h3>
+      <p>2010 - 2014</p>
+      <hr />
+    </div>
+
+    <div class="mt-4 flex flex-col gap-2">
+      <h2 class="text-xl font-extrabold">LANGUAGES</h2>
+      <ul class="list-inside list-disc">
+        <li>English - C2</li>
+        <li>Spanish - Native</li>
+        <li>German - A2</li>
+      </ul>
+      <hr />
+    </div>
   </Printable>
 </PageLayout>
