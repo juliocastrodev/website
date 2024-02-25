@@ -1,6 +1,7 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import Printable from "../components/Printable.astro";
+import Languages from "../components/cv/Languages.astro";
 ---
 
 <PageLayout
@@ -106,14 +107,13 @@ import Printable from "../components/Printable.astro";
       <hr />
     </div>
 
-    <div class="mt-4 flex flex-col gap-2">
-      <h2 class="text-xl font-extrabold">LANGUAGES</h2>
-      <ul class="list-inside list-disc">
-        <li>English - C2</li>
-        <li>Spanish - Native</li>
-        <li>German - A2</li>
-      </ul>
-      <hr />
-    </div>
+    <Languages
+      classes="mt-4"
+      show={[
+        { lang: "English", level: "C1" },
+        { lang: "Spanish", level: "Native" },
+        { lang: "German", level: "A2" },
+      ]}
+    />
   </Printable>
 </PageLayout>
