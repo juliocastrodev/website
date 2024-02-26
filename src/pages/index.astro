@@ -7,6 +7,7 @@ import Experience from "../components/cv/Experience.astro";
 import Skills from "../components/cv/Skills.astro";
 import Summary from "../components/cv/Summary.astro";
 import Header from "../components/cv/Header.astro";
+import Introduction from "../components/cv/Introduction.astro";
 ---
 
 <PageLayout
@@ -17,12 +18,11 @@ import Header from "../components/cv/Header.astro";
   <p>My CV is the following...</p>
 
   <Printable classes="px-12 py-10 bg-white text-black">
-    <div class="flex flex-col gap-2">
-      <h1 class="text-4xl tracking-wide text-center">
-        <span class="font-extrabold">JULIO</span> CASTRO
-      </h1>
-      <h2 class="text-xl text-center">Senior Software Engineer</h2>
-    </div>
+    <Introduction
+      firstName="JULIO"
+      lastName="CASTRO"
+      title="Senior Software Engineer"
+    />
 
     <Header classes="mt-4">
       julio.castro.dev@gmail.com | +41 76 513 18 64 | Zürich, Switzerland
@@ -33,19 +33,19 @@ import Header from "../components/cv/Header.astro";
       eius atque labore ducimus maiores placeat ut quaerat quod. Aspernatur
       dicta, facere maiores incidunt tempora soluta? Pariatur, repellat. Dicta,
       cumque inventore? dicta, facere maiores incidunt tempora soluta? Pariatur,
-      repellat. Dicta, cumque inventore?
+      repellat. Dicta, cumque inventore.
     </Summary>
 
     <Skills
       classes="mt-4"
       show={[
-        "Skill 1",
-        "Skill 2",
-        "Skill 3",
-        "Skill 4",
-        "Skill 5",
-        "Skill 6",
-        "Skill 7",
+        "Skill 1.",
+        "Skill 2.",
+        "Skill 3.",
+        "Skill 4.",
+        "Skill 5.",
+        "Skill 6.",
+        "Skill 7.",
       ]}
     />
 
@@ -56,25 +56,25 @@ import Header from "../components/cv/Header.astro";
           title: "Current Senior Software Position",
           fromDate: "Mar 2019",
           toDate: "Present",
-          remarks: ["Comment 1", "Comment 2", "Comment 3"],
+          remarks: ["Comment 1.", "Comment 2.", "Comment 3."],
         },
         {
           title: "Intermediate Senior Software Position",
           fromDate: "Mar 2019",
           toDate: "Present",
-          remarks: ["Comment 1", "Comment 2", "Comment 3"],
+          remarks: ["Comment 1.", "Comment 2.", "Comment 3."],
         },
         {
           title: "Intermediate Senior Software Position",
           fromDate: "Mar 2019",
           toDate: "Present",
-          remarks: ["Comment 1", "Comment 2", "Comment 3"],
+          remarks: ["Comment 1.", "Comment 2.", "Comment 3."],
         },
         {
           title: "Last Senior Software Position",
           fromDate: "Mar 2019",
           toDate: "Present",
-          remarks: ["Comment 1", "Comment 2", "Comment 3"],
+          remarks: ["Comment 1.", "Comment 2.", "Comment 3."],
         },
       ]}
     />
