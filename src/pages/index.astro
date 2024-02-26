@@ -8,6 +8,8 @@ import Skills from "../components/cv/Skills.astro";
 import Summary from "../components/cv/Summary.astro";
 import Header from "../components/cv/Header.astro";
 import Introduction from "../components/cv/Introduction.astro";
+
+import cvReference from "/cv.pdf";
 ---
 
 <PageLayout
@@ -107,6 +109,10 @@ import Introduction from "../components/cv/Introduction.astro";
       ]}
     />
   </Printable>
+
+  <a href={cvReference} target="_blank" class="hover:underline"
+    >Download CV ⬇️</a
+  >
 
   <p>This website is built using Astro 🚀 and Tailwind 💨</p>
 </PageLayout>
