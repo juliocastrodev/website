@@ -1,8 +1,9 @@
 ---
+type KnownLanguage = "English" | "Spanish" | "German";
 type LanguageLevel = "A1" | "A2" | "B1" | "B2" | "C1" | "C2" | "Native";
 
 interface Props {
-  show?: Array<{ lang: string; level: LanguageLevel }>;
+  show?: Array<{ lang: KnownLanguage; level: LanguageLevel }>;
   classes?: string;
 }
 
@@ -11,14 +12,16 @@ const { show = [], classes = "" } = Astro.props;
 
 <div class={"flex flex-col gap-2 " + classes}>
   <h2 class="text-xl font-extrabold">LANGUAGES</h2>
-  <ul class="list-inside list-disc">
-    {
-      show.map(({ lang, level }) => (
-        <li>
-          {lang} - {level}
-        </li>
-      ))
-    }
-  </ul>
+  {
+    show.length > 0 && (
+      <ul class="list-inside list-disc">
+        {show.map(({ lang, level }) => (
+          <li>
+            {lang} - {level}
+          </li>
+        ))}
+      </ul>
+    )
+  }
   <hr />
 </div>

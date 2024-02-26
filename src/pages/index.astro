@@ -2,6 +2,7 @@
 import PageLayout from "../layouts/PageLayout.astro";
 import Printable from "../components/Printable.astro";
 import Languages from "../components/cv/Languages.astro";
+import Education from "../components/cv/Education.astro";
 ---
 
 <PageLayout
@@ -100,12 +101,21 @@ import Languages from "../components/cv/Languages.astro";
       <hr class="mt-2" />
     </div>
 
-    <div class="mt-4 flex flex-col gap-2">
-      <h2 class="text-xl font-extrabold">EDUCATION</h2>
-      <h3 class="font-bold">Education title</h3>
-      <p>2010 - 2014</p>
-      <hr />
-    </div>
+    <Education
+      classes="mt-4"
+      show={[
+        {
+          title:
+            "Bachelor's Degree in Mathematics and Computer Science from the Polytechnic University of Madrid",
+          fromYear: "2017",
+          toYear: "2021",
+          remarks: [
+            "Achieved an average score of 9/10.",
+            "Awarded for multiple years with academic excellence on behalf of the city of Madrid.",
+          ],
+        },
+      ]}
+    />
 
     <Languages
       classes="mt-4"
