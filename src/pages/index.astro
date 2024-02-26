@@ -6,6 +6,7 @@ import Education from "../components/cv/Education.astro";
 import Experience from "../components/cv/Experience.astro";
 import Skills from "../components/cv/Skills.astro";
 import Summary from "../components/cv/Summary.astro";
+import Header from "../components/cv/Header.astro";
 ---
 
 <PageLayout
@@ -23,13 +24,9 @@ import Summary from "../components/cv/Summary.astro";
       <h2 class="text-xl text-center">Senior Software Engineer</h2>
     </div>
 
-    <div class="mt-4 flex flex-col gap-2">
-      <hr />
-      <p class="text-center">
-        julio.castro.dev@gmail.com | +41 76 513 18 64 | Zürich, Switzerland
-      </p>
-      <hr />
-    </div>
+    <Header classes="mt-4">
+      julio.castro.dev@gmail.com | +41 76 513 18 64 | Zürich, Switzerland
+    </Header>
 
     <Summary classes="mt-6">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
