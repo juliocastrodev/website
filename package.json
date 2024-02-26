@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "cv-to-pdf": "tsx ./src/scripts/cv-to-pdf.ts",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -16,5 +17,10 @@
     "astro": "^4.4.4",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "puppeteer": "^22.3.0",
+    "tsx": "^4.7.1",
+    "zx": "^7.2.3"
   }
 }
