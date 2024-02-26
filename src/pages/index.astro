@@ -5,6 +5,7 @@ import Languages from "../components/cv/Languages.astro";
 import Education from "../components/cv/Education.astro";
 import Experience from "../components/cv/Experience.astro";
 import Skills from "../components/cv/Skills.astro";
+import Summary from "../components/cv/Summary.astro";
 ---
 
 <PageLayout
@@ -30,17 +31,13 @@ import Skills from "../components/cv/Skills.astro";
       <hr />
     </div>
 
-    <div class="mt-6 flex flex-col gap-2">
-      <h2 class="text-xl font-extrabold">SUMMARY</h2>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-        eius atque labore ducimus maiores placeat ut quaerat quod. Aspernatur
-        dicta, facere maiores incidunt tempora soluta? Pariatur, repellat.
-        Dicta, cumque inventore? dicta, facere maiores incidunt tempora soluta?
-        Pariatur, repellat. Dicta, cumque inventore?
-      </p>
-      <hr />
-    </div>
+    <Summary classes="mt-6">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+      eius atque labore ducimus maiores placeat ut quaerat quod. Aspernatur
+      dicta, facere maiores incidunt tempora soluta? Pariatur, repellat. Dicta,
+      cumque inventore? dicta, facere maiores incidunt tempora soluta? Pariatur,
+      repellat. Dicta, cumque inventore?
+    </Summary>
 
     <Skills
       classes="mt-4"
