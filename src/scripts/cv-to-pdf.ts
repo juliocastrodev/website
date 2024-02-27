@@ -7,6 +7,9 @@ const CV_SELECTOR = "#julio-cv";
 
 // -----------------------------------------
 
+console.log(`🧼 Cleaning previous CV...`);
+await $`mkdir -p $(dirname ${CV_DESTINATION}) && echo '' > ${CV_DESTINATION}`.quiet();
+
 console.log(`🔪 Releasing port ${APP_URL.port} to run the app there...`);
 await $`pnpx kill-port ${APP_URL.port}`.quiet();
 
@@ -15,7 +18,6 @@ const app = $`pnpm build && pnpm preview --port ${APP_URL.port}`.quiet();
 
 console.log("⏳ Waiting for the app to be available...");
 await $`pnpx wait-on ${APP_URL} --timeout 60s`.quiet();
-console.log(`💯 App ready on ${APP_URL}...`);
 
 console.log("👨🏻‍💻 Opening app in the browser...");
 const browser = await puppeteer.launch();

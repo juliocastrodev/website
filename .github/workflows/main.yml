@@ -1,0 +1,29 @@
+name: juliocastrodev.com CI/CD config
+on: push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v4
+
+      - name: Install and Setup PNPM
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8.x.x
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build project
+        run: pnpm cv-to-pdf && pnpm build && touch dist/.nojekyll
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
