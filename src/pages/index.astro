@@ -30,15 +30,20 @@ import cvReference from "/cv.pdf";
     />
 
     <Header classes="mt-4">
-      julio.castro.dev@gmail.com | +41 76 513 18 64 | Zürich, Switzerland
+      <a href="mailto:julio.castro.dev@gmail.com" class="hover:underline"
+        >julio.castro.dev@gmail.com</a
+      >
+      | +41 76 513 18 64 | Zürich, Switzerland
     </Header>
 
     <Summary classes="mt-6">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-      eius atque labore ducimus maiores placeat ut quaerat quod. Aspernatur
-      dicta, facere maiores incidunt tempora soluta? Pariatur, repellat. Dicta,
-      cumque inventore? dicta, facere maiores incidunt tempora soluta? Pariatur,
-      repellat. Dicta, cumque inventore.
+      Extensive experience in software engineering from startup to large
+      corporate levels. Proven success leading teams in various technologies
+      including Angular, React, Nodejs or Spring Boot, resulting in highly
+      performing, harmonious and cohesive teams with deep technical and business
+      knowledge. Succeeded in applying mathematical and scientific skills to
+      drive and clarify intricate and complex business challenges, resulting in
+      bigger, better and faster achievements.
     </Summary>
 
     <Skills
@@ -111,8 +116,10 @@ import cvReference from "/cv.pdf";
   </Printable>
 
   <a href={cvReference} target="_blank" class="hover:underline"
-    >Download CV ⬇️</a
+    >Download CV 💾</a
   >
+
+  <!-- TODO: add technologies/hard skills according to rockstar guide. Also add links to linkedin, github, etc in icons -->
 
   <p>This website is built using Astro 🚀 and Tailwind 💨</p>
 </PageLayout>
