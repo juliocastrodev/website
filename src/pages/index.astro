@@ -71,33 +71,38 @@ import cvReference from "/cv.pdf";
       classes="mt-4"
     />
 
+    <!-- {
+            title:
+              "Quality Assurance Developer at Santander Innovation Lab | Fabrik",
+            fromDate: "Sep 2019",
+            toDate: "Feb 2020",
+            remarks: [
+              "Santander Innovation Lab is a group of talented teams focused on creating disruptive products in the financial industry.",
+              "Each application undergoes extensive and rigorous quality testing, which were costly and manual when I joined the team.",
+              "Implemented, executed and automated a wide variety of tests. The automation was focused on the most expensive ones and was carried out with Appium, Selenium and Java.",
+              "Achieved a reduction from weeks of manual work to a few minutes of execution. In addition to greater reliability, stability and convenience of the results, as the tests were executed by computers instead of humans. This was the first time in the company to use the system I introduced, which inspired other teams.",
+              "Skills: Java · Selenium · Appium · GitLab · Scrum · JIRA",
+            ],
+          } -->
     <Experience
       classes="mt-4"
       show={[
-        {
-          title: "Current Senior Software Position",
-          fromDate: "Mar 2019",
-          toDate: "Present",
-          remarks: ["Comment 1.", "Comment 2.", "Comment 3."],
-        },
-        {
-          title: "Intermediate Senior Software Position",
-          fromDate: "Mar 2019",
-          toDate: "Present",
-          remarks: ["Comment 1.", "Comment 2.", "Comment 3."],
-        },
-        {
-          title: "Intermediate Senior Software Position",
-          fromDate: "Mar 2019",
-          toDate: "Present",
-          remarks: ["Comment 1.", "Comment 2.", "Comment 3."],
-        },
-        {
-          title: "Last Senior Software Position",
-          fromDate: "Mar 2019",
-          toDate: "Present",
-          remarks: ["Comment 1.", "Comment 2.", "Comment 3."],
-        },
+        ...Array(6)
+          .fill(null)
+          .map(() => ({
+            title:
+              "Quality Assurance Developer at Santander Innovation Lab | Fabrik",
+            fromDate: "Sep 2019",
+            toDate: "Feb 2020",
+            remarks: [
+              // -------------------------------------------------------------------------------------------
+              "Santander Innovation Lab is a group of talented teams focused on creating disruptive products.",
+              "Each application undergoes extensive and rigorous quality testing, which were costly and.",
+              "Implemented, executed and automated a wide variety of tests. The automation was focused",
+              "Achieved a reduction from weeks of manual work to a few minutes of execution. In addition.",
+              "Skills: Java · Selenium · Appium · GitLab · Scrum · JIRA",
+            ],
+          })),
       ]}
     />
 
@@ -121,8 +126,8 @@ import cvReference from "/cv.pdf";
       classes="mt-4"
       show={[
         { lang: "English", level: "C1" },
-        { lang: "Spanish", level: "Native" },
         { lang: "German", level: "A2" },
+        { lang: "Spanish", level: "Native" },
       ]}
     />
   </Printable>
