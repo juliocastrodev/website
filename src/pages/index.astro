@@ -47,16 +47,28 @@ import cvReference from "/cv.pdf";
     </Summary>
 
     <Skills
-      classes="mt-4"
-      show={[
-        "Skill 1.",
-        "Skill 2.",
-        "Skill 3.",
-        "Skill 4.",
-        "Skill 5.",
-        "Skill 6.",
-        "Skill generated.",
+      languages={[
+        "Typescript",
+        "Java",
+        "Python",
+        "HTML/CSS",
+        "Javascript",
+        "SQL",
       ]}
+      technologies={[
+        "Angular",
+        "React",
+        "Spring Boot",
+        "Nodejs",
+        "Nextjs",
+        "Cypress",
+      ]}
+      other={[
+        "Domain Driven Design",
+        "Clean Arquitecture",
+        "Modern Reactivity",
+      ]}
+      classes="mt-4"
     />
 
     <Experience
@@ -116,10 +128,10 @@ import cvReference from "/cv.pdf";
   </Printable>
 
   <a href={cvReference} target="_blank" class="hover:underline"
-    >Download CV 💾</a
+    >Download CV 💾.</a
   >
 
-  <!-- TODO: add technologies/hard skills according to rockstar guide. Also add links to linkedin, github, etc in icons -->
+  <!-- TODO: Add links to linkedin, github, etc in icons -->
 
-  <p>This website is built using Astro 🚀 and Tailwind 💨</p>
+  <p>This website is built using Astro 🚀 and Tailwind 💨.</p>
 </PageLayout>
