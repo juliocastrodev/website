@@ -2,7 +2,7 @@ import puppeteer from "puppeteer";
 import { $ } from "zx";
 
 const APP_URL = new URL("http://localhost:4444");
-const CV_DESTINATION = "./public/cv.pdf";
+const CV_DESTINATION = "./public/Julio_Castro_CV.pdf";
 const CV_SELECTOR = "#julio-cv";
 
 // -----------------------------------------
