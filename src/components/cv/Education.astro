@@ -1,7 +1,8 @@
 ---
 interface Props {
   show?: Array<{
-    title: string;
+    studies: string;
+    details: string;
     fromYear: string;
     toYear: string;
     remarks?: string[];
@@ -18,12 +19,17 @@ const { show = [], classes = "" } = Astro.props;
   {
     show.length > 0 && (
       <div class="flex flex-col gap-6">
-        {show.map(({ title, fromYear, toYear, remarks = [] }) => (
+        {show.map(({ studies, details, fromYear, toYear, remarks = [] }) => (
           <div class="flex flex-col gap-1">
-            <h3 class="font-bold max-w-[75%]">{title}</h3>
-            <p>
-              {fromYear} - {toYear}
-            </p>
+            <div class="flex gap-2 items-center">
+              <h3 class="font-bold">{studies}</h3>
+              <span class="text-sm">
+                {fromYear} - {toYear}
+              </span>
+            </div>
+
+            <p>{details}</p>
+
             {remarks.length > 0 && (
               <ul class="list-inside list-disc">
                 {remarks.map((remark) => (
