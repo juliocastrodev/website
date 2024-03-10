@@ -9,7 +9,15 @@ import Summary from "../components/cv/Summary.astro";
 import Header from "../components/cv/Header.astro";
 import Introduction from "../components/cv/Introduction.astro";
 
+import linkedinIconReference from "../assets/linkedin.svg";
+import githubIconReference from "../assets/github.svg";
+
 import cvReference from "/Julio_Castro_CV.pdf";
+
+const PHONE_NUMBER = "+41 76 513 18 64";
+const EMAIL = "julio.castro.dev@gmail.com";
+const LINKEDIN_LINK = "https://www.linkedin.com/in/juliocastrodev/";
+const GITHUB_LINK = "https://github.com/juliocastrodev";
 ---
 
 <PageLayout
@@ -32,13 +40,9 @@ import cvReference from "/Julio_Castro_CV.pdf";
     />
 
     <Header classes="text-sm">
-      +41 76 513 18 64 | <a
-        href="mailto:julio.castro.dev@gmail.com"
-        class="hover:underline">julio.castro.dev@gmail.com</a
-      > | <a
-        class="underline"
-        target="_blank"
-        href="https://www.linkedin.com/in/juliocastrodev/"
+      {PHONE_NUMBER} | <a href={`mailto:${EMAIL}`} class="hover:underline"
+        >{EMAIL}</a
+      > | <a class="underline" target="_blank" href={LINKEDIN_LINK}
         >linkedin.com/in/juliocastrodev</a
       > | Zurich, Switzerland
     </Header>
@@ -205,7 +209,17 @@ import cvReference from "/Julio_Castro_CV.pdf";
     >Download CV 💾.</a
   >
 
-  <!-- TODO: Add links to linkedin, github, etc in icons -->
+  <div class="flex gap-4">
+    <a target="_blank" href={LINKEDIN_LINK}>
+      <img
+        class="size-16"
+        src={linkedinIconReference.src}
+        alt="LinkedIn icon"
+      />
+    </a>
 
-  <p>This website is built using Astro 🚀 and Tailwind 💨.</p>
+    <a target="_blank" href={GITHUB_LINK}>
+      <img class="size-16" src={githubIconReference.src} alt="GitHub icon" />
+    </a>
+  </div>
 </PageLayout>
