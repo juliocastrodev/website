@@ -18,27 +18,27 @@ const shouldShowSomething =
 ---
 
 <div class={"flex flex-col gap-2 " + classes}>
-  <h2 class="text-xl font-extrabold">SKILLS, LANGUAGES AND INTERESTS</h2>
+  <h2 class="text-xl font-extrabold">SKILLS</h2>
 
   {
     shouldShowSomething && (
       <ul class="list-inside list-disc">
         {languages.length > 0 && (
           <li>
-            <span class="underline">Languages:</span> {languages.join(", ")}
+            <span class="underline">Languages:</span> {languages.join(", ")}.
           </li>
         )}
 
         {technologies.length > 0 && (
           <li>
             <span class="underline">Technologies:</span>{" "}
-            {technologies.join(", ")}
+            {technologies.join(", ")}.
           </li>
         )}
 
         {other.length > 0 && (
           <li>
-            <span class="underline">Other:</span> {other.join(", ")}
+            <span class="underline">Other:</span> {other.join(", ")}.
           </li>
         )}
       </ul>

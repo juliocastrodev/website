@@ -3,7 +3,10 @@ type KnownLanguage = "English" | "Spanish" | "German";
 type LanguageLevel = "A1" | "A2" | "B1" | "B2" | "C1" | "C2" | "Native";
 
 interface Props {
-  show?: Array<{ lang: KnownLanguage; level: LanguageLevel }>;
+  show?: Array<{
+    lang: KnownLanguage;
+    level: LanguageLevel | `${LanguageLevel} - ${LanguageLevel}`;
+  }>;
   classes?: string;
 }
 
@@ -18,7 +21,7 @@ const { show = [], classes = "" } = Astro.props;
       <ul class="list-inside list-disc">
         {show.map(({ lang, level }) => (
           <li>
-            {lang} - {level}
+            {lang}: {level}.
           </li>
         ))}
       </ul>

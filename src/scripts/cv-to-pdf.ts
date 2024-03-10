@@ -33,8 +33,8 @@ await page.addStyleTag({
 
   @page {
     size: A4;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   @page :first {

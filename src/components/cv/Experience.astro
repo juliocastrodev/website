@@ -5,6 +5,7 @@ interface Props {
     fromDate: string;
     toDate: string;
     remarks: string[];
+    skills: string[];
   }>;
   classes?: string;
 }
@@ -18,19 +19,22 @@ const { show = [], classes = "" } = Astro.props;
   {
     show.length > 0 && (
       <div class="flex flex-col gap-6">
-        {show.map(({ title, fromDate, toDate, remarks }) => (
+        {show.map((position) => (
           <div class="flex flex-col gap-1">
-            <h3 class="font-bold">{title}</h3>
+            <h3 class="font-bold">{position.title}</h3>
             <p>
-              {fromDate} - {toDate}
+              {position.fromDate} - {position.toDate}
             </p>
-            {remarks.length > 0 && (
-              <ul class="list-inside list-disc">
-                {remarks.map((remark) => (
-                  <li>{remark}</li>
-                ))}
-              </ul>
-            )}
+
+            <ul class="list-inside list-disc flex flex-col gap-1">
+              {position.remarks.length > 0 &&
+                position.remarks.map((remark) => <li>{remark}</li>)}
+
+              <li>
+                <span class="underline">Skills:</span>
+                {position.skills.join(", ")}.
+              </li>
+            </ul>
           </div>
         ))}
       </div>
