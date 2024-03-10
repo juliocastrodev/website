@@ -21,7 +21,7 @@ import cvReference from "/Julio_Castro_CV.pdf";
 
   <p>Down here you can find my CV with my contact info ⬇️.</p>
 
-  <Printable id="julio-cv" classes="px-12 py-10 bg-white text-black">
+  <Printable id="julio-cv" classes="p-12 bg-white text-black">
     <Introduction
       firstName="JULIO"
       lastName="CASTRO"
@@ -29,10 +29,17 @@ import cvReference from "/Julio_Castro_CV.pdf";
     />
 
     <Header classes="mt-4">
-      <a href="mailto:julio.castro.dev@gmail.com" class="hover:underline"
-        >julio.castro.dev@gmail.com</a
+      +41 76 513 18 64 | <a
+        href="mailto:julio.castro.dev@gmail.com"
+        class="hover:underline">julio.castro.dev@gmail.com</a
+      > | <a
+        class="hover:underline"
+        target="_blank"
+        href="https://www.linkedin.com/in/juliocastrodev/"
+        >linkedin.com/in/juliocastrodev</a
       >
-      | +41 76 513 18 64 | Zurich, Switzerland
+      <!-- <br />
+      Zurich, Switzerland -->
     </Header>
 
     <Summary classes="mt-6">
@@ -70,38 +77,104 @@ import cvReference from "/Julio_Castro_CV.pdf";
       classes="mt-4"
     />
 
-    <!-- {
-            title:
-              "Quality Assurance Developer at Santander Innovation Lab | Fabrik",
-            fromDate: "Sep 2019",
-            toDate: "Feb 2020",
-            remarks: [
-              "Santander Innovation Lab is a group of talented teams focused on creating disruptive products in the financial industry.",
-              "Each application undergoes extensive and rigorous quality testing, which were costly and manual when I joined the team.",
-              "Implemented, executed and automated a wide variety of tests. The automation was focused on the most expensive ones and was carried out with Appium, Selenium and Java.",
-              "Achieved a reduction from weeks of manual work to a few minutes of execution. In addition to greater reliability, stability and convenience of the results, as the tests were executed by computers instead of humans. This was the first time in the company to use the system I introduced, which inspired other teams.",
-              "Skills: Java · Selenium · Appium · GitLab · Scrum · JIRA",
-            ],
-          } -->
     <Experience
       classes="mt-4"
       show={[
-        ...Array(6)
-          .fill(null)
-          .map(() => ({
-            title:
-              "Quality Assurance Developer at Santander Innovation Lab | Fabrik",
-            fromDate: "Sep 2019",
-            toDate: "Feb 2020",
-            remarks: [
-              // -------------------------------------------------------------------------------------------
-              "Santander Innovation Lab is a group of talented teams focused on creating disruptive products.",
-              "Each application undergoes extensive and rigorous quality testing, which were costly and.",
-              "Implemented, executed and automated a wide variety of tests. The automation was focused",
-              "Achieved a reduction from weeks of manual work to a few minutes of execution. In addition.",
-              "Skills: Java · Selenium · Appium · GitLab · Scrum · JIRA",
-            ],
-          })),
+        {
+          title: "Senior Software Engineer at Swisscom IAM | Zuhlke Group",
+          fromDate: "Jun 2022",
+          toDate: "Present",
+          remarks: [
+            "Led the frontend of a tribe of 25+ engineers, supporting, promoting and driving the adoption of best practices and cutting edge technologies.",
+            "Introduced numerous improvements with direct impact on daily operations: reduced pipeline time by half, reduced e2e test errors by flakiness to 0, developed a tool that cut several hours of manual work to just 1 click, among others.",
+            "Mentored up to 5 new colleagues and contributed to improve onboarding processes, reducing on average by two weeks the time in which a new member became a regular contributor.",
+            "Played a crucial role in making both frontend and backend architectural decisions, achieved a huge reduction in complexity in reusing and nesting IAM flows, crucial business feature, allowing tasks that had weeks of estimation to be released to production within a day.",
+          ],
+          skills: [
+            "TypeScript",
+            "Angular",
+            "Java",
+            "Spring Boot",
+            "Domain Driven Design",
+            "Bitbucket",
+          ],
+        },
+        {
+          title:
+            "Senior Software Engineer at We Feed Raw, a US pet food start up | Acid Tango",
+          fromDate: "Jun 2021",
+          toDate: "Jun 2022",
+          remarks: [
+            "Led, built and maintained the backend and most of the entire infrastructure, achieved a successful migration and launch, returning a +50% increase in users and also new project signings and extensions with the customer.",
+            "Migrated the complex pet feeding algorithm to an efficient and easy to read and extend solution, it was even reused in another similar product for the UK.",
+            "Contributed and collaborated closely with the frontend team, achieving record delivery performance in the company, even reaching to release features in production within minutes.",
+            "Actively participated and led weekly company conferences sharing and teaching on a multitude of topics, achieving direct positive impact on 5+ different projects.",
+          ],
+          skills: [
+            "TypeScript",
+            "React",
+            "Nextjs",
+            "Domain Driven Design",
+            "Nodejs",
+            "PostgreSQL",
+            "AWS",
+            "GitHub",
+          ],
+        },
+        {
+          title:
+            "Frontend Developer at Openbank, Satander's digital bank | Fabrik",
+          fromDate: "Oct 2020",
+          toDate: "Jun 2021",
+          remarks: [
+            "Led the upgrade of the microfrontend dedicated to bank transfers, removing thousands of lines of legacy code and reducing related story point estimates by 80%.",
+            "Became the go-to person for technical questions from both business and development.",
+          ],
+          skills: [
+            "TypeScript",
+            "React",
+            "Microfrontends",
+            "Redux",
+            "Bitbucket",
+          ],
+        },
+        {
+          title: "Backend Developer at Santander Payment Hub | Fabrik",
+          fromDate: "Jul 2020",
+          toDate: "Oct 2020",
+          remarks: [
+            "Integrated microservices in a macroscopic project of 300+ engineers focused on Santander's international payment system, achieving on-time goals with 5+ constraints while maintaining business requirements and high quality standards.",
+            "Implemented deployment support tool, reducing human errors by 80%.",
+          ],
+          skills: [
+            "Java",
+            "Spring Boot",
+            "Kafka",
+            "Bitbucket",
+            "Microsoft Azure",
+          ],
+        },
+        {
+          title: "Frontend Developer at Santander Innovation Lab | Fabrik",
+          fromDate: "Feb 2020",
+          toDate: "Jul 2020",
+          remarks: [
+            "Participated in development tasks for a hybrid mobile application for Santander UK, outstanding with 50% above average delivery performance.",
+            "Implemented the most important algorithm for the user experience: the credit card refresh logic, a key feature for business and development. Task estimated to be completed in one week and completed in one day, being afterwards a simpler, more robust and efficient solution.",
+          ],
+          skills: ["TypeScript", "Angular", "Ionic", "GitLab"],
+        },
+        {
+          title:
+            "Quality Assurance Developer at Santander Innovation Lab | Fabrik",
+          fromDate: "Sep 2019",
+          toDate: "Feb 2020",
+          remarks: [
+            "Automated the end to end regression tests of 4 hybrid mobile applications focused on the banking sector, resulting in a reduction from 2 weeks of manual work to 10 minutes of automatic execution, a milestone achieved for the first time in the team and in the whole company.",
+            "Obtained the opportunity to work in the development team due to great performance, business knowledge and problem solving skills.",
+          ],
+          skills: ["Java", "Selenium", "Appium", "GitLab"],
+        },
       ]}
     />
 
@@ -115,7 +188,7 @@ import cvReference from "/Julio_Castro_CV.pdf";
           toYear: "2021",
           remarks: [
             "Achieved an average score of 9/10.",
-            "Awarded for multiple years with academic excellence on behalf of the city of Madrid.",
+            "Awarded every year and throughout all 4 years with the recognition of academic excellence on behalf of the city of Madrid.",
           ],
         },
       ]}
@@ -125,7 +198,7 @@ import cvReference from "/Julio_Castro_CV.pdf";
       classes="mt-4"
       show={[
         { lang: "English", level: "C1" },
-        { lang: "German", level: "A2" },
+        { lang: "German", level: "A2 - B1" },
         { lang: "Spanish", level: "Native" },
       ]}
     />
