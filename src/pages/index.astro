@@ -21,23 +21,31 @@ import cvReference from "/Julio_Castro_CV.pdf";
 
   <p>Down here you can find my CV with my contact info ⬇️.</p>
 
-  <Printable id="julio-cv" classes="p-12 bg-white text-black">
+  <Printable
+    id="julio-cv"
+    classes="p-12 bg-white text-black flex flex-col gap-4"
+  >
     <Introduction
       firstName="JULIO"
       lastName="CASTRO"
       title="Senior Software Engineer"
     />
 
-    <Header classes="mt-4">
+    <Header classes="text-sm">
       +41 76 513 18 64 | <a
         href="mailto:julio.castro.dev@gmail.com"
         class="hover:underline">julio.castro.dev@gmail.com</a
+      > | <a
+        class="underline"
+        target="_blank"
+        href="https://www.linkedin.com/in/juliocastrodev/"
+        >linkedin.com/in/juliocastrodev</a
       > | Zurich, Switzerland
     </Header>
 
-    <Summary classes="mt-6">
+    <Summary>
       Extensive experience in software engineering from startup to large
-      corporate levels. Proven success leading teams in various technologies
+      corporate levels. Proven success leading teams in various technologies,
       including Angular, React, Nodejs or Spring Boot, resulting in highly
       performing, harmonious and cohesive teams with deep technical and business
       knowledge. Succeeded in applying mathematical and scientific skills to
@@ -64,25 +72,22 @@ import cvReference from "/Julio_Castro_CV.pdf";
       ]}
       other={[
         "Domain Driven Design",
-        "Clean Arquitecture",
+        "Clean Architecture",
         "Modern Reactivity",
       ]}
-      classes="mt-4"
     />
 
     <Experience
-      classes="mt-4"
       show={[
         {
           title: "Senior Software Engineer at Swisscom IAM | Zuhlke Group",
           fromDate: "Jun 2022",
           toDate: "Present",
           remarks: [
-            "Led the frontend of a tribe of 25+ engineers, supporting, promoting and driving the adoption of best practices and cutting edge technologies.",
-            "Introduced numerous improvements with direct impact on daily operations: reduced pipeline time by half, developed a tool that cut several hours of manual work to just 1 click, among others.",
-            "Mentored up to 5 new colleagues and contributed to improve onboarding processes, reducing on average by two weeks the time in which a new member became a regular contributor.",
-            // "Played a crucial role in making both frontend and backend architectural decisions, achieved a huge reduction in complexity in reusing and nesting IAM flows, crucial business feature, allowing tasks that had weeks of estimation to be released to production within a day.",
-            "Played a crucial role in making both frontend and backend architectural decisions, achieved a huge reduction in complexity in reusing and nesting IAM flows, crucial business feature, allowing tasks that had weeks of estimation to be released to production within a day.",
+            "Led the frontend of a tribe of 25+ engineers, driving, promoting and supporting the adoption of best practices and cutting-edge technologies.",
+            "Introduced numerous improvements with a direct impact on daily operations: reduced pipeline time by half, developed a tool that cut several hours of manual work to just 1 click, among others.",
+            "Mentored up to 5 new colleagues and contributed to improving onboarding processes, reducing on average by two weeks the time in which a new member became a regular contributor.",
+            "Played a crucial role in making both frontend and backend architectural decisions, achieved a massive reduction in the complexity of critical business features, allowing related tasks that had weeks of estimation to be released to production within a day.",
           ],
           skills: [
             "TypeScript",
@@ -173,7 +178,6 @@ import cvReference from "/Julio_Castro_CV.pdf";
     />
 
     <Education
-      classes="mt-4"
       show={[
         {
           studies: "Bachelor's Degree | Polytechnic University of Madrid",
@@ -182,14 +186,13 @@ import cvReference from "/Julio_Castro_CV.pdf";
           toYear: "2021",
           remarks: [
             "Achieved an average score of 9/10.",
-            "Awarded annual academic excellence on behalf of Madrid city the 4 consecutive years.",
+            "Awarded academic excellence on behalf of Madrid city.",
           ],
         },
       ]}
     />
 
     <Languages
-      classes="mt-4"
       show={[
         { lang: "English", level: "C1" },
         { lang: "German", level: "A2 - B1" },

@@ -3,21 +3,15 @@ interface Props {
   languages?: string[];
   technologies?: string[];
   other?: string[];
-  classes?: string;
 }
 
-const {
-  languages = [],
-  technologies = [],
-  other = [],
-  classes = "",
-} = Astro.props;
+const { languages = [], technologies = [], other = [] } = Astro.props;
 
 const shouldShowSomething =
   languages.length > 0 || technologies.length > 0 || other.length > 0;
 ---
 
-<div class={"flex flex-col gap-2 " + classes}>
+<div class="flex flex-col gap-2">
   <h2 class="text-xl font-extrabold">SKILLS</h2>
 
   {
