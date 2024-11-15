@@ -8,7 +8,7 @@ const CV_SELECTOR = "#julio-cv";
 // -----------------------------------------
 
 console.log(`🧼 Cleaning previous CV...`);
-await $`mkdir -p $(dirname ${CV_DESTINATION}) && echo '' > ${CV_DESTINATION}`.quiet();
+await $`mkdir -p $(dirname ${CV_DESTINATION}) && touch ${CV_DESTINATION}`.quiet();
 
 console.log(`🔪 Releasing port ${APP_URL.port} to run the app there...`);
 await $`pnpx kill-port ${APP_URL.port}`.quiet();
