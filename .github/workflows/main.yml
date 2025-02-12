@@ -15,15 +15,17 @@ jobs:
       - name: Install and Setup PNPM
         uses: pnpm/action-setup@v3
         with:
-          version: 8.x.x
+          version: 10.x.x
 
       - name: Install dependencies
         run: pnpm install
 
       - name: Build project
-        run: pnpm cv-to-pdf && pnpm build && touch dist/.nojekyll
+        run: pnpm cv-to-pdf && pnpm build
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
         with:
-          folder: dist
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=website
