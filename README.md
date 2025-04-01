@@ -1,3 +1,3 @@
-# juliocastrodev.com website
+# Website | juliocastrodev.com
 
 Built using Astro 🚀 and Tailwind 💨.
