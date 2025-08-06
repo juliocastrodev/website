@@ -1,0 +1,25 @@
+---
+interface Props {
+  show?: string[];
+}
+
+const { show = [] } = Astro.props;
+
+const shouldShowSomething = show.length > 0;
+---
+
+<div class="flex flex-col gap-2">
+  <h2 class="text-xl font-extrabold">OTHERS</h2>
+
+  {
+    shouldShowSomething && (
+      <ul class="list-inside list-disc">
+        {show.map((point) => (
+          <li>{point}</li>
+        ))}
+      </ul>
+    )
+  }
+
+  <hr />
+</div>
